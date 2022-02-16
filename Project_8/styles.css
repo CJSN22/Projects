@@ -45,6 +45,12 @@ body {
   font-size: 17px;
   border: 0;
   border-radius: 5px;
+  transition: 0.3s ease;
+
+}
+
+.btn:hover {
+  transform: scale(1.05);
 }
 
 .btn:focus {
