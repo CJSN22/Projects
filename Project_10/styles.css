@@ -74,6 +74,7 @@ h1 {
 
 .btn:active {
   transform: scale(0.95);
+  background-color: #fa5210;
 }
 
 .btn:focus {
