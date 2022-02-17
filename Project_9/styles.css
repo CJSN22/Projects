@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:eght@200;400&display=swap');
 
 
 * {
@@ -6,9 +6,42 @@
 }
 
 body {
-    background-color: #c4f7ec;
-    font-family: 'Roboto', sans-serif;
-    overflow: hidden;
+    background-color: #1b4146;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     height: 100vh;
+    overflow: hidden;
     margin: 0;
 }
+
+.btn {
+  background: #1b4146;
+  box-shadow: inset 17px -17px 27px #0b1a1c,
+              inset -17px 17px 27px #2b6870;
+  border-radius: 50px;
+  border: none;
+  color: rgb(87, 116, 117);
+  margin: 1rem;
+  padding: 1.5rem 3rem;
+  font-size: 1.2rem;
+  font-family: inherit;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:hover {
+  background: #33aebe;
+  box-shadow: inset 17px -17px 27px #0b1a1c,
+              inset -17px 17px 27px #2b6870;
+  transform: scale(0.98);
+  color: #1b4146;;
+}
+
