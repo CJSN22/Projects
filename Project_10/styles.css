@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 
 * {
@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #686de0;
+    background-color: #ffb866;
     font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
@@ -29,10 +29,12 @@ body {
 
 }
 
-h3 {
+h2 {
   margin: 0;
-  opacity: 0.5;
+  opacity: 1;
   letter-spacing: 2px;
+  color: #ff4800;
+  font-weight: 700;
 }
 
 .joke {
@@ -41,11 +43,21 @@ h3 {
   line-height: 40px;
   margin: 50px auto;
   max-width: 600px;
+  transition: 0.3s ease;
+}
+
+@media screen and (max-width: 600px) {
+    .joke {
+      font-size: 20px;
+      line-height: 30px;
+      letter-spacing: 0.9px;
+      margin: 40px auto;
+    }
 }
 
 .btn {
-  background-color: #9f68e0;
-  color: white;
+  background-color: #ff6528;
+  color: rgb(255, 245, 238);
   border: 0;
   border-radius: 10px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.1);
