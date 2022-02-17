@@ -29,12 +29,13 @@ body {
 
 }
 
-h2 {
+h1 {
   margin: 0;
   opacity: 1;
   letter-spacing: 2px;
   color: #ff4800;
   font-weight: 700;
+  transition: 0.3s ease-in-out;
 }
 
 .joke {
@@ -52,6 +53,10 @@ h2 {
       line-height: 30px;
       letter-spacing: 0.9px;
       margin: 40px auto;
+    }
+
+    h1 {
+      font-size: 150%;
     }
 }
 
