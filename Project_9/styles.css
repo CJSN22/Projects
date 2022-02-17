@@ -38,10 +38,10 @@ body {
 }
 
 .btn:hover {
-  background: #33aebe;
+  background: #153f44;
   box-shadow: inset 17px -17px 27px #0b1a1c,
               inset -17px 17px 27px #2b6870;
   transform: scale(0.98);
-  color: #1b4146;;
+  color: #91b0b9e3;;
 }
 
