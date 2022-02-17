@@ -22,7 +22,7 @@ body {
   background: #1b4146;
   box-shadow: inset 17px -17px 27px #0b1a1c,
               inset -17px 17px 27px #2b6870;
-  border-radius: 50px;
+  border-radius: 10px;
   border: none;
   color: rgb(87, 116, 117);
   margin: 1rem;
@@ -41,7 +41,14 @@ body {
   background: #153f44;
   box-shadow: inset 17px -17px 27px #0b1a1c,
               inset -17px 17px 27px #2b6870;
-  transform: scale(0.98);
+  transform: scale(1.05);
   color: #91b0b9e3;;
+}
+
+.btn:active {
+  color: rgb(87, 116, 117);
+  transform: scale(0.95);
+  box-shadow: inset 17px -17px 27px #24575e,
+              inset -17px 17px 27px #0b1a1c;
 }
 
