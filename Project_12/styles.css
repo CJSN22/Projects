@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 
 * {
@@ -6,9 +6,14 @@
 }
 
 body {
-    background-color: #c4f7ec;
+    background-color: #ffb866;
     font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
     height: 100vh;
     margin: 0;
+    padding: 20px;
 }
