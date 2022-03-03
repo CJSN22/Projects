@@ -7,7 +7,7 @@
 
 :root {
   --primary-color: rgb(20, 39, 36);
-  --secondary-color: rgb(49, 218, 204);
+  --secondary-color: rgb(220, 252, 249);
 }
 
 html {
@@ -15,12 +15,12 @@ html {
 }
 
 html.dark {
-  --primary-color: rgb(49, 218, 204);
+  --primary-color: rgba(1, 255, 230, 0.651);
   --secondary-color: rgb(20, 39, 36);
 }
 
 html.dark {
-  background-color: rgb(20, 39, 36);
+  background-color: rgb(0, 59, 51);
   color: var(--primary-color);
 }
 
@@ -83,11 +83,11 @@ body {
 .needle.second {
   transform: translate(-50%, -100%) rotate(0deg);
   height: 100px;
-  background-color: #e74c3c;
+  background-color: #f34f3d;
 }
 
 .center-point {
-  background-color: #e74c3c;
+  background-color: #f34f3d;;
   width: 10px;
   height: 10px;
   position: absolute;
