@@ -6,8 +6,8 @@
 }
 
 :root {
-  --primary-color: black;
-  --secondary-color: white;
+  --primary-color: rgb(20, 39, 36);
+  --secondary-color: rgb(49, 218, 204);
 }
 
 html {
@@ -15,12 +15,12 @@ html {
 }
 
 html.dark {
-  --primary-color: white;
-  --secondary-color: black;
+  --primary-color: rgb(49, 218, 204);
+  --secondary-color: rgb(20, 39, 36);
 }
 
 html.dark {
-  background-color: #111;
+  background-color: rgb(20, 39, 36);
   color: var(--primary-color);
 }
 
@@ -68,6 +68,7 @@ body {
   height: 65px;
   width: 3px;
   transform-origin: bottom center;
+  transition: all 0.5s ease-in;
 }
 
 .needle.hour {
