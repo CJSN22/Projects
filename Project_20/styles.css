@@ -6,8 +6,9 @@
 }
 
 :root {
-  --primary-color: rgb(20, 39, 36);
-  --secondary-color: rgb(220, 252, 249);
+  
+  --primary-color: rgb(34 38 38);
+  --secondary-color: rgb(9 178 119);
 }
 
 html {
@@ -15,12 +16,15 @@ html {
 }
 
 html.dark {
-  --primary-color: rgba(1, 255, 230, 0.651);
-  --secondary-color: rgb(20, 39, 36);
+  /* --primary-color: rgba(1, 255, 230, 0.651);
+  --secondary-color: rgb(20, 39, 36); */
+
+  --primary-color: rgb(9 178 119);
+  --secondary-color: rgb(34 38 38);
 }
 
 html.dark {
-  background-color: rgb(0, 59, 51);
+  background-color: rgb(34 38 38);
   color: var(--primary-color);
 }
 
