@@ -7,15 +7,50 @@
 
 
 body {
-    background-color: #e1e1e1;
+    background-color: #000;
     font-family: 'Muli', sans-serif;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
     overflow: hidden;
     height: 100vh;
     margin: 0;
-    padding: 20px;
+ 
 }
 
+button {
+  background-color: rgb(0, 51, 128);
+  color: white;
+  border: 1px rgb(0, 51, 128);
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 20px 30px;
+  overflow: hidden;
+  margin: 10px 0;
+  position: relative;
+  border-radius: 5PX;
+}
+
+button:focus {
+  outline: none;
+}
+
+button .circle {
+  position: absolute;
+  background: rgb(58,180,73);
+  background: radial-gradient(circle, rgba(58,180,73,1) 0%, rgba(208,253,29,1) 50%, rgba(69,133,252,1) 100%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: scale .5s ease-in-out;
+}
+
+@keyframes scale {
+  to {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }  
+}
