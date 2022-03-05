@@ -8,23 +8,23 @@
 :root {
   
   --primary-color: rgb(34 38 38);
-  --secondary-color: rgb(9 178 119);
+  --secondary-color: rgb(255, 255, 255);
 }
 
 html {
   transition: all 0.5s ease-in;
 }
 
-html .clock {
+/* html .clock {
   background-color: var(--secondary-color);
   border-radius: 50px;
-}
+} */
 
 html.dark {
   /* --primary-color: rgba(1, 255, 230, 0.651);
   --secondary-color: rgb(20, 39, 36); */
 
-  --primary-color: rgb(9 178 119);
+  --primary-color: rgb(255, 255, 255);
   --secondary-color: rgb(34 38 38);
 }
 
@@ -33,10 +33,10 @@ html.dark {
   color: var(--primary-color);
 }
 
-html.dark .clock {
+/* html.dark .clock {
   background-color: white;
   border-radius: 50px;
-}
+} */
 
 body {
     font-family: 'Heebo', sans-serif;
