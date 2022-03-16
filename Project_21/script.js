@@ -1,24 +1,39 @@
-const buttons = document.querySelectorAll('.ripple')
+const fill = document.querySelector('.fill')
+const empties = document.querySelectorAll('.empty')
 
-buttons.forEach(button => {
-    button.addEventListener('click', function(e) {
-        const x = e.clientX
-        const y = e.clientY
+fill.addEventListener('dragstart', dragStart)
+fill.addEventListener('dragend', dragEnd)
 
-        const buttonTop = e.target.offsetTop
-        const buttonLeft = e.target.offsetLeft
+for(const empty of empties) {
+    empty.addEventListener('dragover', dragOver)
+    empty.addEventListener('dragenter', dragEnter)
+    empty.addEventListener('dragleave', dragLeave)
+    empty.addEventListener('drop', dragDrop)
+}
 
-        const xInside = x - buttonLeft
-        const yInside = y - buttonTop
+function dragStart() {
+    this.className += ' hold' 
+    setTimeout(() => this.className = 'invisible', 0)
+}
 
-        const circle = document.createElement('span')
-        circle.classList.add('circle')
-        circle.style.top = yInside + 'px'
-        circle.style.left = xInside + 'px'
+function dragEnd() {
+    this.className = 'fill'
+}
 
-        this.appendChild(circle)
+function dragOver(e) {
+    e.preventDefault()
+}
 
-        // Remove circles from the DOM
-        setTimeout(() => circle.remove(), 500)
-    })
-})
+function dragEnter(e) {
+    e.preventDefault()
+    this.className += ' hovered'
+}
+
+function dragLeave() {
+    this.className = 'empty'
+}
+
+function dragDrop() {
+    this.className = 'empty'
+    this.append(fill)
+}

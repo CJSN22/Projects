@@ -17,21 +17,28 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 
-    <title>Animated Navigation</title>
+    <title>Social Media Counter</title>
 </head>
 <body>
-    <nav class="active" id="nav">
-     <ul>
-       <li><a href="#">Home</a></li>
-       <li><a href="#">Works</a></li>
-       <li><a href="#">About</a></li>
-       <li><a href="#">Contact</a></li>
-     </ul>
-     <button class="icon" id="toggle">
-       <div class="line line1"></div>
-       <div class="line line2"></div>
-     </button>
-    </nav>
+
+  <div class="counter-container">
+    <i class="fab fa-twitter fa-3x"></i>
+      <div class="counter" data-target="2400"></div>
+      <span>Twitter Followers</span>
+  </div>
+
+  <div class="counter-container">
+    <i class="fab fa-youtube fa-3x"></i>
+      <div class="counter" data-target="7600"></div>
+      <span>YouTube Subscribers</span>
+    
+  </div>
+
+  <div class="counter-container">
+    <i class="fab fa-facebook fa-3x"></i>
+      <div class="counter" data-target="5600"></div>
+      <span>Facebook Fans</span>
+  </div>
 
 <!-- JS -->
     <script src="script.js"></script>

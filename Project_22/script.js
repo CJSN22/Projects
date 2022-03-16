@@ -1,39 +1,53 @@
-const fill = document.querySelector('.fill')
-const empties = document.querySelectorAll('.empty')
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d')
 
-fill.addEventListener('dragstart', dragStart)
-fill.addEventListener('dragend', dragEnd)
+let size = 20
+let isPressed = false
+let color = 'black'
+let x 
+let y
 
-for(const empty of empties) {
-    empty.addEventListener('dragover', dragOver)
-    empty.addEventListener('dragenter', dragEnter)
-    empty.addEventListener('dragleave', dragLeave)
-    empty.addEventListener('drop', dragDrop)
+canvas.addEventListener('mousedown', (e) => {
+    isPressed = true
+
+    x = e.offsetX
+    y = e.offsetY
+})
+
+canvas.addEventListener('mouseup', (e) => {
+    isPressed = false
+
+    x = undefined
+    y = undefined
+})
+
+canvas.addEventListener('mousemove', (e) => {
+    if(isPressed) {
+        const x2 = e.offsetX
+        const y2 = e.offsetY
+
+        drawCircle(x2, y2)
+        drawLine(x, y, x2, y2)
+
+        x = x2
+        y = y2
+    }
+})
+
+
+
+function drawCircle(x, y) {
+    ctx.beginPath()
+    ctx.arc(x, y, size, 0, Math.PI * 2)
+    ctx.fillStyle = color
+    ctx.fill()
 }
 
-function dragStart() {
-    this.className += ' hold' 
-    setTimeout(() => this.className = 'invisible', 0)
-}
-
-function dragEnd() {
-    this.className = 'fill'
-}
-
-function dragOver(e) {
-    e.preventDefault()
-}
-
-function dragEnter(e) {
-    e.preventDefault()
-    this.className += ' hovered'
-}
-
-function dragLeave() {
-    this.className = 'empty'
-}
-
-function dragDrop() {
-    this.className = 'empty'
-    this.append(fill)
+function drawLine(x1, y1, x2, y2) {
+    ctx.beginPath()
+    ctx.moveTo(x1, y1)
+    ctx.lineTo(x2, y2)
+    ctx.stokeStyle = color
+    ctx.lineWidth = size * 2
+    ctx.stroke()
 }

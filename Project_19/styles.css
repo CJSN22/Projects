@@ -1,83 +1,150 @@
-@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:300&display=swap');
 
 
 * {
   box-sizing: border-box;
 }
 
+:root {
+  
+  --primary-color: rgb(34 38 38);
+  --secondary-color: rgb(255, 255, 255);
+}
+
+html {
+  transition: all 0.5s ease-in;
+}
+
+/* html .clock {
+  background-color: var(--secondary-color);
+  border-radius: 50px;
+} */
+
+html.dark {
+  /* --primary-color: rgba(1, 255, 230, 0.651);
+  --secondary-color: rgb(20, 39, 36); */
+
+  --primary-color: rgb(255, 255, 255);
+  --secondary-color: rgb(34 38 38);
+}
+
+html.dark {
+  background-color: rgb(34 38 38);
+  color: var(--primary-color);
+}
+
+/* html.dark .clock {
+  background-color: white;
+  border-radius: 50px;
+} */
 
 body {
-    background-color: #e1e1e1;
-    font-family: 'Muli', sans-serif;
+    font-family: 'Heebo', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
     overflow: hidden;
     height: 100vh;
     margin: 0;
-    padding: 20px;
-    background-position: center;
-    background-size: cover;
-    transition: 0.4s ease;
-  }
+}
 
-  body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: -1;
-  }
+.toggle {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: 0;
+  border-radius: 4px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 100px;
+  cursor: pointer;
+}
+.toggle:focus {
+  outline: none;
+}
 
-  .slider-container {
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    height: 70vh;
-    width: 70vw;
-    position: relative;
-    overflow: hidden;
-  }
+.clock-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  .slide {
-    opacity: 0;
-    height: 100vh;
-    width: 100vw;
-    background-position: center center;
-    background-size: cover;
-    position: absolute;
-    top: -15vh;
-    left: -15vw;
-    transition: 0.4s ease;
-    z-index: 1;
-  }
+.clock {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
 
-  .slide.active {
-    opacity: 1;
-  }
+.needle {
+  background-color: var(--primary-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 65px;
+  width: 3px;
+  transform-origin: bottom center;
+  transition: all 0.5s ease-in;
+}
 
-  .arrow {
-    position: fixed;
-    background-color: transparent;
-    color: white;
-    padding: 20px;
-    font-size: 30px;
-    border: 2px solid orange;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-  }
+.needle.hour {
+  transform: translate(-50%, -100%) rotate(0deg);
+}
 
-  .arrow:focus {
-    outline: 0;
-  }
+.needle.minute {
+  transform: translate(-50%, -100%) rotate(0deg);
+  height: 100px;
+}
 
-  .left-arrow {
-    left: calc(15vw - 65px);
-  }
+.needle.second {
+  transform: translate(-50%, -100%) rotate(0deg);
+  height: 100px;
+  background-color: #f34f3d;
+}
 
-  .right-arrow {
-    right: calc(15vw - 65px);
-  }
+.center-point {
+  background-color: #f34f3d;;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.center-point::after {
+  content: '';
+  background-color: var(--primary-color);
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.time {
+  font-size: 60px;
+}
+
+.date {
+  color: #aaa;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+.date .circle {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border-radius: 50%;
+  height: 18px;
+  width: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 18px;
+  transition: all 0.5s ease-in;
+  font-size: 12px;
+}
