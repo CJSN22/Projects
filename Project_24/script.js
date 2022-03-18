@@ -11,7 +11,7 @@ const animated_bg_texts = document.querySelectorAll('.animated-bg-text')
 setTimeout(getData, 2500)
 
 function getData() {
-    header.innerHTML = '<img src="/Project_24/img/img-bg.jpg" alt="">'
+    header.innerHTML = '<img src="/Project_24/img/pizza.jpg" alt="">'
     title.innerHTML = 'Lorem ipsum dolor sit amet.'
     excerpt.innerHTML = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, aliquid.'
     profile_img.innerHTML = '<img src="https://randomuser.me/api/portraits/men/45.jpg" alt="">'
