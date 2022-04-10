@@ -7,7 +7,7 @@
 
 
 body {
-    background-color: darksalmon;
+    background-color: rgb(122, 233, 218);
     font-family: 'Muli', sans-serif;
     display: flex;
     flex-direction: column;
@@ -30,7 +30,7 @@ input {
   width: 50px;
   padding: 5px;
   font-size: 18px;
-  background-color: darksalmon;
+  background-color: rgb(122, 233, 218);
   border: none;
   text-align: center;
 }
