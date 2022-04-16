@@ -7,7 +7,7 @@
 
 
 body {
-    background-color: #3b3b98;
+    background-color: #2b8463;
     color: white;
     font-family: 'Muli', sans-serif;
     display: flex;
@@ -26,11 +26,12 @@ h2 {
 }
 
 .container {
-  background-color: #23235b;
+  background-color: #164135;
   box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.2);
   padding: 20px;
   width: 350px;
   max-width: 100%;
+  border-radius: 5px;
 }
 
 .result-container {
@@ -44,6 +45,7 @@ h2 {
   padding: 12px 10px;
   height: 50px;
   width: 100%;
+  border-radius: 5px;
 }
 
 .result-container #results {
@@ -62,7 +64,8 @@ h2 {
 
 .btn {
   border: none;
-  background-color: #3b3b98;
+  border-radius: 5px;
+  background-color: #2b8463;
   color: white;
   font-size: 16px;
   padding: 8px 12px;
