@@ -7,7 +7,7 @@
 
 
 body {
-    background-color: rebeccapurple;
+    background-color: royalblue;
     font-family: 'Poppins', sans-serif;
     display: flex;
     flex-direction: column;
@@ -20,7 +20,7 @@ body {
 
 .btn {
   background-color: white;
-  color: rebeccapurple;
+  color: royalblue;
   font-family: inherit;
   font-weight: bold;
   padding: 1rem;
@@ -48,7 +48,7 @@ body {
 
 .toast {
   background-color: white;
-  color: rebeccapurple;
+  color: royalblue;
   border-radius: 5px;
   padding: 1rem 2rem;
   margin: 0.5rem;
