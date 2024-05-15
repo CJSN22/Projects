@@ -7,7 +7,7 @@
 
 
 body {
-    background-color: #113a33;
+    background-color: hsl(170, 55%, 15%);
     color: white;
     font-family: 'Poppins', sans-serif;
     display: flex;
